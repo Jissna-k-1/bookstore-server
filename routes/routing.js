@@ -20,7 +20,7 @@ router.post('/google/sign-in',userController.googleLoginController)
 
 // ---------authorised user----------
 
-// add book
+// add book - request body content is fromdata
 router.post('/user/book/add',jwtMiddleware,multerMiddleware.array('uploadImages',3),bookController.addBookController)
 
 
